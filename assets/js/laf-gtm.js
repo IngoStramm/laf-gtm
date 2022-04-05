@@ -12,7 +12,7 @@ const lgTidioChat = () => {
     }
 
     // cria o botão e adiciona ao body
-    const btnId = lg_object.lg_tidio_btn_id ? lg_object.lg_tidio_btn_id : 'lg-whatsapp-btn'
+    const btnId = lg_object.lg_tidio_btn_id ? lg_object.lg_tidio_btn_id : 'lg-tidio-btn'
     const btnToTrack = document.createElement('a')
     btnToTrack.id = btnId
     btnToTrack.addEventListener('click', handleBtnClick)

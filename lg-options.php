@@ -44,7 +44,7 @@ function lg_register_plugin_options_metabox()
      */
     $cmb_options->add_field(array(
         'name'    => esc_html__('Tidio Chat', 'cmb2'),
-        'desc'    => esc_html__('Este plugin irá criar um botão com o ID informado abaixo. Quando o usuário clicar para abrir a janela do Tidio Chat, irá acionar este botão, que consequentemente irá acionar o evento de rastreio do GTM. ', 'cmb2'),
+        'desc'    => esc_html__('Este plugin irá criar um botão com o ID informado abaixo. Quando o usuário clicar para abrir a janela do Tidio Chat, irá acionar este botão, que por usa vez pode ser usado pelo GTM. ', 'cmb2'),
         'id'      => 'lg_tidio_title',
         'type'    => 'title',
     ));
@@ -61,8 +61,8 @@ function lg_register_plugin_options_metabox()
     ));
 
     $cmb_options->add_field(array(
-        'name'    => esc_html__('ID do botão do WhatsApp (opcional)', 'cmb2'),
-        'desc'    => __('Deixe em branco para usar <code>lg-whatsapp-btn</code>', 'cmb2'),
+        'name'    => esc_html__('ID do botão do Chat do Tidio (opcional)', 'cmb2'),
+        'desc'    => __('Deixe em branco para usar <code>lg-tidio-btn</code>', 'cmb2'),
         'id'      => 'lg_tidio_btn_id',
         'type'    => 'text',
     ));
