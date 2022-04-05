@@ -61,7 +61,7 @@ function lg_register_plugin_options_metabox()
     ));
 
     $cmb_options->add_field(array(
-        'name'    => esc_html__('ID do botão do Chat do Tidio (opcional)', 'cmb2'),
+        'name'    => esc_html__('ID do botão (opcional)', 'cmb2'),
         'desc'    => __('Deixe em branco para usar <code>lg-tidio-btn</code>', 'cmb2'),
         'id'      => 'lg_tidio_btn_id',
         'type'    => 'text',
