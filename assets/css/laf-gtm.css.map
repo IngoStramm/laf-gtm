@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "laf-gtm.css",
+	"sources": [
+		"../sass/laf-gtm.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
