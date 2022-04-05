@@ -53,7 +53,11 @@ function lg_register_plugin_options_metabox()
         'name' => esc_html__('Ativar GTM para Tidio Chat', 'cmb2'),
         'desc'    => esc_html__('Deixe marcado esta opção para ativar a o GTM para o Tidio Chat', 'cmb2'),
         'id'   => 'lg_tidio',
-        'type' => 'checkbox',
+        'type' => 'radio',
+        'options' => array(
+            'on' => esc_html__('Ativado', 'lg'),
+            'off' => esc_html__('Desativado', 'lg'),
+        ),
     ));
 
     $cmb_options->add_field(array(
