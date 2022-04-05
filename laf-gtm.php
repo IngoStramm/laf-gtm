@@ -4,7 +4,7 @@
  * Plugin Name: LAF GTM
  * Plugin URI: https://agencialaf.com
  * Description: Plugin da Agência LAF, com opções para o GTM capturar lead de aplicações externas (botão do WhatsApp do RD Station e Tidio Chat).
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Ingo Stramm
  * Text Domain: lg
  * License: GPLv2
@@ -24,7 +24,7 @@ function lg_debug($debug)
 
 require_once 'tgm/tgm.php';
 // require_once 'classes/classes.php';
-require_once 'options.php';
+require_once 'lg-options.php';
 require_once 'scripts.php';
 
 require 'plugin-update-checker-4.10/plugin-update-checker.php';
