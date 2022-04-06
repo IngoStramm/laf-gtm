@@ -31,7 +31,6 @@ const lgTidioChat = () => {
                     console.log('achou btn')
                     clearInterval(checkBtnChat)
                     btnChat.addEventListener('click', () => {
-                        chatStarted = true
                         btnToTrack.click()
                     })
                 }
