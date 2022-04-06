@@ -7,7 +7,7 @@ const lgTidioChat = () => {
     console.log('carregou: ', lg_object);
     const handleBtnClick = (e) => {
         e.preventDefault()
-        btnToTrack.removeEventListener('click', handleBtnClick)
+        // btnToTrack.removeEventListener('click', handleBtnClick)
         console.log('clickou btnToTrack');
     }
 
