@@ -16,11 +16,15 @@ function lg_frontend_scripts()
     wp_enqueue_script('laf-gtm-script');
     $lg_tidio = lg_get_option('lg_tidio');
     $lg_tidio_btn_id = lg_get_option('lg_tidio_btn_id');
+    $lg_rd_whats = lg_get_option('lg_rd_whats');
+    $lg_rd_whats_btn_id = lg_get_option('lg_rd_whats_btn_id');
     // lg_debug($lg_tidio);
     $arr_obj = array(
         'ajax_url'              => admin_url('admin-ajax.php'),
         'lg_tidio'              => $lg_tidio,
         'lg_tidio_btn_id'       => $lg_tidio_btn_id,
+        'lg_rd_whats'              => $lg_rd_whats,
+        'lg_rd_whats_btn_id'       => $lg_rd_whats_btn_id,
     );
     wp_localize_script('laf-gtm-script', 'lg_object', $arr_obj);
     wp_enqueue_style('laf-gtm-style', LG_URL . 'assets/css/laf-gtm.css', array(), false, 'all');

@@ -44,7 +44,7 @@ function lg_register_plugin_options_metabox()
      */
     $cmb_options->add_field(array(
         'name'    => esc_html__('Tidio Chat', 'cmb2'),
-        'desc'    => esc_html__('Este plugin irá criar um botão com o ID informado abaixo. Quando o usuário clicar para abrir a janela do Tidio Chat, irá acionar este botão, que por usa vez pode ser usado pelo GTM. ', 'cmb2'),
+        'desc'    => esc_html__('Esta opção irá criar um botão com o ID informado abaixo. Quando o usuário clicar para abrir a janela do Tidio Chat, irá acionar este botão, que por usa vez pode ser usado pelo GTM. ', 'cmb2'),
         'id'      => 'lg_tidio_title',
         'type'    => 'title',
     ));
@@ -66,6 +66,32 @@ function lg_register_plugin_options_metabox()
         'id'      => 'lg_tidio_btn_id',
         'type'    => 'text',
     ));
+
+    $cmb_options->add_field(array(
+        'name'    => esc_html__('RD Station WhatsApp', 'cmb2'),
+        'desc'    => esc_html__('Esta opção irá criar um botão com o ID informado abaixo. Quando o usuário clicar para abrir a janela do RD Station WhatsApp, irá acionar este botão, que por usa vez pode ser usado pelo GTM. ', 'cmb2'),
+        'id'      => 'lg_rd_whats_title',
+        'type'    => 'title',
+    ));
+
+    $cmb_options->add_field(array(
+        'name' => esc_html__('Ativar GTM para RD Station WhatsApp', 'cmb2'),
+        'desc'    => esc_html__('Deixe marcado esta opção para ativar a o GTM para o RD Station WhatsApp', 'cmb2'),
+        'id'   => 'lg_rd_whats',
+        'type' => 'radio',
+        'options' => array(
+            'on' => esc_html__('Ativado', 'lg'),
+            'off' => esc_html__('Desativado', 'lg'),
+        ),
+    ));
+
+    $cmb_options->add_field(array(
+        'name'    => esc_html__('ID do botão (opcional)', 'cmb2'),
+        'desc'    => __('Deixe em branco para usar <code>lg-rd-whats-btn</code>', 'cmb2'),
+        'id'      => 'lg_rd_whats_btn_id',
+        'type'    => 'text',
+    ));
+
 }
 
 function lg_get_option($key = '', $default = false)
