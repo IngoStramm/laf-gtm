@@ -46,18 +46,17 @@ const startGtmTracker = () => {
         document.body.appendChild(btnToTrack)
 
         if (item.id === 'tidio') {
-            console.log(item);
             // verifica se o tidio chat já carregou
             const checkTidioChat = setInterval(() => {
                 const tidioChat = document.getElementById('tidio-chat-iframe')
                 // console.log(tidioChat);
                 if (typeof (tidioChat) !== undefined && tidioChat !== null) {
                     clearInterval(checkTidioChat)
-                    console.log('achou iframe')
+                    // console.log('achou iframe')
                     const btnChat = tidioChat.contentWindow.document.getElementById('button-body')
                     const checkBtnChat = setInterval(() => {
                         if (typeof (btnChat) !== undefined || btnChat !== null) {
-                            console.log('achou btn')
+                            // console.log('achou btn')
                             clearInterval(checkBtnChat)
                             btnChat.addEventListener('click', () => {
                                 btnToTrack.click()
@@ -69,7 +68,6 @@ const startGtmTracker = () => {
         }
 
         if (item.id === 'rd-whats') {
-            console.log(item);
 
             // incia o loop
             const checkRdWhats = setInterval(() => {
@@ -83,9 +81,9 @@ const startGtmTracker = () => {
 
                 // Loop busca pelo botão usando a classe
                 Array.prototype.forEach.call(rdstationPopupJsFloatingButtons, rdstationPopupJsFloatingButton => {
-
+                    // console.log(rdstationPopupJsFloatingButton)
                     // salva os elementos em variáveis
-                    const rdstationPopupJsFloatingButtonsParent = rdstationPopupJsFloatingButton.parenNode
+                    const rdstationPopupJsFloatingButtonsParent = rdstationPopupJsFloatingButton.parentNode
                     const bricksFormInputs = rdstationPopupJsFloatingButtonsParent.getElementsByClassName('bricks-form__input')
                     const rdstationPopupJsSubmitButtons = rdstationPopupJsFloatingButtonsParent.getElementsByClassName('rdstation-popup-js-submit-button')
                     const rdWhatsForm = rdstationPopupJsFloatingButtonsParent.getElementsByTagName('form')
@@ -114,6 +112,9 @@ const startGtmTracker = () => {
                             // Se os campos foram validados, dispara o botão "fantasma"
                             if (validateFields === true) {
                                 btnToTrack.click()
+                                /*jshint -W087 */
+                                debugger
+                                /*jshint -W087 */
                             }
 
                         });
