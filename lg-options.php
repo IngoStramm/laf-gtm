@@ -58,6 +58,7 @@ function lg_register_plugin_options_metabox()
             'on' => esc_html__('Ativado', 'lg'),
             'off' => esc_html__('Desativado', 'lg'),
         ),
+        'default'   => 'off'
     ));
 
     $cmb_options->add_field(array(
