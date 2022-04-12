@@ -41,7 +41,7 @@ const startGtmTracker = () => {
         btnToTrack.id = btnId
         btnToTrack.addEventListener('click', (e) => {
             e.preventDefault()
-            console.log('clickou: ' + btnId);
+            // console.log('clickou: ' + btnId);
         })
         document.body.appendChild(btnToTrack)
 
@@ -81,7 +81,6 @@ const startGtmTracker = () => {
 
                 // Loop busca pelo botão usando a classe
                 Array.prototype.forEach.call(rdstationPopupJsFloatingButtons, rdstationPopupJsFloatingButton => {
-                    // console.log(rdstationPopupJsFloatingButton)
                     // salva os elementos em variáveis
                     const rdstationPopupJsFloatingButtonsParent = rdstationPopupJsFloatingButton.parentNode
                     const bricksFormInputs = rdstationPopupJsFloatingButtonsParent.getElementsByClassName('bricks-form__input')
@@ -101,7 +100,7 @@ const startGtmTracker = () => {
 
                             // Verifica se os campos foram validados
                             Array.prototype.forEach.call(bricksFormInputs, (bricksFormInput, i) => {
-                                if (bricksFormInput.value.length === 0 || bricksFormInput.parentNode.classList.contains('has-danger')) {
+                                if ((bricksFormInput.value && bricksFormInput.value.length === 0) || bricksFormInput.parentNode.classList.contains('has-danger')) {
                                     validateFields = false;
                                 }
                                 if (i === 2 && bricksFormInput.value.length <= 4 || bricksFormInput.parentNode.classList.contains('has-danger')) {

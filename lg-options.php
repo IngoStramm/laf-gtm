@@ -83,6 +83,7 @@ function lg_register_plugin_options_metabox()
             'on' => esc_html__('Ativado', 'lg'),
             'off' => esc_html__('Desativado', 'lg'),
         ),
+        'default'   => 'off'
     ));
 
     $cmb_options->add_field(array(
@@ -91,7 +92,6 @@ function lg_register_plugin_options_metabox()
         'id'      => 'lg_rd_whats_btn_id',
         'type'    => 'text',
     ));
-
 }
 
 function lg_get_option($key = '', $default = false)
